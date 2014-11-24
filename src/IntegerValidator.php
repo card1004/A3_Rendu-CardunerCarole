@@ -11,8 +11,8 @@ namespace Carole_A3_Rendu\TypeValidator;
 class IntegerValidator
 {
     /**
-     * @param int $integer
-     * @param int $number
+     * @param integer $integer
+     * @param integer $number
      * @return bool
      * @throws \Exception
      */
@@ -33,9 +33,9 @@ class IntegerValidator
     }
 
     /**
-     * @param int $integer
-     * @param int $min
-     * @param int $max
+     * @param integer $integer
+     * @param integer $min
+     * @param integer $max
      * @return bool
      * @throws \Exception
      */
