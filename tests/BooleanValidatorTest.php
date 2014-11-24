@@ -16,6 +16,11 @@ use Carole_A3_Rendu\TypeValidator;
  */
 class BooleanValidatorTest extends \PHPUnit_Framework_TestCase
 {
+    /**
+     * Test if the function booleanValidator return a data type boolean
+     *
+     * @throws \Exception
+     */
     public function testBooleanValidator()
     {
         $boolean = true;

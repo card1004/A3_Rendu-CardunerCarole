@@ -12,3 +12,11 @@ PDO::FETCH_OBJ;
 $boolean = false;
 
 echo Carole_A3_Rendu\TypeValidator\BooleanValidator::booleanValidator($boolean);
+
+$number = 3;
+$integer = 3;
+echo Carole_A3_Rendu\TypeValidator\IntegerValidator::integerEqualValidator($integer, $number);
+
+$min = 1;
+$max = 4;
+echo Carole_A3_Rendu\TypeValidator\IntegerValidator::integerInBetweenValidator($integer,$min,$max);
