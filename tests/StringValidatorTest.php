@@ -19,28 +19,37 @@ class StringValidatorTest extends \PHPUnit_Framework_TestCase{
     public function testStringEqualTo()
     {
         $string = 'This is a string';
-        $result = TypeValidator\StringValidator::stringEqualTo($string, mb_strlen($string));
+        $length = mb_strlen($string);
+        $result = TypeValidator\StringValidator::stringEqualTo(mb_strlen($string), $length);
+
         $this->assertTrue($result);
     }
 
     public function testStringSuperiorTo()
     {
         $string = 'This is a string';
-        $result = TypeValidator\StringValidator::stringSuperiorTo($string, mb_strlen($string)-5);
+        $length = mb_strlen($string)-5;
+        $result = TypeValidator\StringValidator::stringSuperiorTo(mb_strlen($string), $length);
+
         $this->assertTrue($result);
     }
 
     public function testStringInferiorTo()
     {
         $string = 'This is a string';
-        $result = TypeValidator\StringValidator::stringInferiorTo($string, mb_strlen($string)+5);
+        $length = mb_strlen($string)+5;
+        $result = TypeValidator\StringValidator::stringInferiorTo(mb_strlen($string), $length);
+
         $this->assertTrue($result);
     }
 
     public function testStringBetween()
     {
         $string = 'This is a string';
-        $result = TypeValidator\StringValidator::stringBetween($string, mb_strlen($string)-5, mb_strlen($string)+5);
+        $min = mb_strlen($string)-5;
+        $max = mb_strlen($string)+5;
+        $result = TypeValidator\StringValidator::stringBetween(mb_strlen($string), $min, $max);
+
         $this->assertTrue($result);
     }
 
@@ -48,6 +57,7 @@ class StringValidatorTest extends \PHPUnit_Framework_TestCase{
     {
         $string = 'This is a string ';
         $result = TypeValidator\StringValidator::stringStartAndEndWithSpace($string);
+
         $this->assertTrue($result);
     }
 
@@ -56,6 +66,7 @@ class StringValidatorTest extends \PHPUnit_Framework_TestCase{
     {
         $string = 'Thisisastringwithnospace';
         $result = TypeValidator\StringValidator::stringWithNoWhiteSpace($string);
+
         $this->assertTrue($result);
     }
 }
