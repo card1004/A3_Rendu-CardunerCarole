@@ -17,6 +17,7 @@ class BooleanValidator {
             return true;
         }else{
             return false;
+
         };
     }
 }
