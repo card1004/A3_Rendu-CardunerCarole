@@ -13,8 +13,6 @@ class IntegerValidator
     /**
      * @param integer $integer
      * @param integer $number
-     * @return bool
-     * @throws \Exception
      */
     public static function integerEqualValidator($integer, $number)
     {
@@ -36,8 +34,6 @@ class IntegerValidator
      * @param integer $integer
      * @param integer $min
      * @param integer $max
-     * @return bool
-     * @throws \Exception
      */
     public static function integerInBetweenValidator($integer, $min, $max)
     {
