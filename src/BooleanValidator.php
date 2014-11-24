@@ -11,6 +11,11 @@ namespace Carole_A3_Rendu\TypeValidator;
 
 class BooleanValidator
 {
+    /**
+     * @param bool $boolean
+     * @return bool
+     * @throws \Exception
+     */
     public static function booleanValidator($boolean)
     {
         if(is_bool($boolean) === true){
