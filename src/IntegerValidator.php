@@ -8,7 +8,8 @@
 
 namespace Carole_A3_Rendu\TypeValidator;
 
-class IntegerValidator {
+class IntegerValidator
+{
     public static function integerEqualValidator($integer, $number)
     {
 

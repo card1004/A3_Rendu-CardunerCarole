@@ -16,5 +16,10 @@ use Carole_A3_Rendu\TypeValidator;
  */
 class BooleanValidatorTest extends \PHPUnit_Framework_TestCase
 {
-
+    public function testBooleanValidator()
+    {
+        $boolean = true;
+        $function = TypeValidator\BooleanValidator::booleanValidator($boolean);
+        $this->assertTrue($function);
+    }
 }

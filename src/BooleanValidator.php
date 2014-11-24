@@ -9,7 +9,8 @@
 namespace Carole_A3_Rendu\TypeValidator;
 
 
-class BooleanValidator {
+class BooleanValidator
+{
 
     public static function booleanValidator($boolean)
     {
