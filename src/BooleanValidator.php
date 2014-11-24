@@ -12,7 +12,7 @@ namespace Carole_A3_Rendu\TypeValidator;
 class BooleanValidator
 {
     /**
-     * @param bool $boolean
+     * @param booleal $boolean
      * @return bool
      * @throws \Exception
      */

@@ -52,4 +52,4 @@ class IntegerValidator
             throw new \Exception ('The numbers are not integers');
         }
     }
-} 
+}
