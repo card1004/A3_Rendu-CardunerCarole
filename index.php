@@ -15,8 +15,8 @@ echo Carole_A3_Rendu\TypeValidator\BooleanValidator::booleanValidator($boolean);
 
 $number = 3;
 $integer = 3;
-echo Carole_A3_Rendu\TypeValidator\IntegerValidator::integerEqualValidator($integer, $number);
+echo Carole_A3_Rendu\TypeValidator\IntegerValidator::integerEqualTo($integer, $number);
 
 $min = -1;
 $max = 4;
-echo Carole_A3_Rendu\TypeValidator\IntegerValidator::integerInBetweenValidator($integer,$min,$max);
+echo Carole_A3_Rendu\TypeValidator\IntegerValidator::integerInBetween($integer,$min,$max);

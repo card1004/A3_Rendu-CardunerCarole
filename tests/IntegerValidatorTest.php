@@ -17,16 +17,41 @@ use Carole_A3_Rendu\TypeValidator;
 class IntegerValidatorTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * Test if
+     * Test if $integer is equal to $number
      *
      * @throws \Exception
      */
-    public function testIntegerEqualValidator()
+    public function testIntegerEqualTo()
     {
-        $integer  = 4;
-        $number   = 4;
-        $function = TypeValidator\IntegerValidator::integerEqualValidator($integer,$number);
-        $this->assertTrue($function);
+        $number = mt_rand(18, 100);
+        $result = TypeValidator\IntegerValidator::integerEqualTo($number, $number);
+        $this->assertTrue($result);
+    }
+
+    /**
+     * Test if $integer is equal to $number
+     *
+     * @throws \Exception
+     */
+    public function testIntegerSuperiorTo()
+    {
+        $number = mt_rand(18, 100);
+        $result = TypeValidator\IntegerValidator::integerSuperiorTo($number, $number-1);
+
+        $this->assertTrue($result);
+    }
+
+    /**
+     * Test if $integer is equal to $number
+     *
+     * @throws \Exception
+     */
+    public function testIntegerInferiorTo()
+    {
+        $number = mt_rand(18, 100);
+        $result = TypeValidator\IntegerValidator::integerInferiorTo($number, $number+1);
+
+        $this->assertTrue($result);
     }
 
     /**
@@ -34,12 +59,13 @@ class IntegerValidatorTest extends \PHPUnit_Framework_TestCase
      *
      * @throws \Exception
      */
-    public function testIntegerInBetweenValidator()
+    public function testIntegerInBetween()
     {
-        $integer  = 3;
-        $min      = 2;
-        $max      = 4;
-        $function = TypeValidator\IntegerValidator::integerInBetweenValidator($integer, $min, $max);
-        $this->assertTrue($function);
+        $integer = mt_rand(33, 66);
+        $min = mt_rand(0, 32);
+        $max = mt_rand(67, 100);
+        $result = TypeValidator\IntegerValidator::integerInBetween($integer, $min, $max);
+
+        $this->assertTrue($result);
     }
 }

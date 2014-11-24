@@ -11,13 +11,17 @@ namespace Carole_A3_Rendu\TypeValidator;
 class IntegerValidator
 {
     /**
-     * @param integer $integer
-     * @param integer $number
+     * @param int $integer
+     * @param int $number
+     *
+     * @return bool
+     *
+     * @throws \Exception
      */
-    public static function integerEqualValidator($integer, $number)
+    public static function integerEqualTo($integer, $number)
     {
-        if(is_int($integer) && is_int($number)){
-            if($integer === $number){
+        if((int)$integer === true && (int)$number === true){
+            if($integer == $number){
                 return true;
             }else{
                 return false;
@@ -31,13 +35,65 @@ class IntegerValidator
     }
 
     /**
-     * @param integer $integer
-     * @param integer $min
-     * @param integer $max
+     * @param int $integer
+     * @param int $number
+     *
+     * @return bool
+     *
+     * @throws \Exception
      */
-    public static function integerInBetweenValidator($integer, $min, $max)
+    public static function integerSuperiorTo($integer, $number)
     {
-        if(is_int($integer) && is_int($min) && is_int($max)){
+        if((int)$integer === true && (int)$number === true){
+            if($integer > $number){
+                return true;
+            }else{
+                return false;
+                throw new \Exception ('The numbers are not equals');
+            }
+        }else{
+            return false;
+            throw new \Exception ('The numbers are not integers');
+        }
+
+    }
+
+    /**
+     * @param int $integer
+     * @param int $number
+     *
+     * @return bool
+     *
+     * @throws \Exception
+     */
+    public static function integerInferiorTo($integer, $number)
+    {
+        if((int)$integer === true && (int)$number === true){
+            if($integer < $number){
+                return true;
+            }else{
+                return false;
+                throw new \Exception ('The numbers are not equals');
+            }
+        }else{
+            return false;
+            throw new \Exception ('The numbers are not integers');
+        }
+
+    }
+
+    /**
+     * @param int $integer
+     * @param int $min
+     * @param int $max
+     *
+     * @return bool
+     *
+     * @throws \Exception
+     */
+    public static function integerInBetween($integer, $min, $max)
+    {
+        if((int)$integer === true && (int)$min === true && (int)$max === true){
             if($min<$integer && $integer<$max){
                 return true;
             }else{
@@ -49,3 +105,11 @@ class IntegerValidator
         }
     }
 }
+
+/**
+ *
+Supérieur
+Inférieur
+Négatif (avec possiblité d'inclure 0)
+Positif (avec possiblité d'inclure 0)
+ */
