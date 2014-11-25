@@ -11,7 +11,7 @@ require __DIR__.'/vendor/autoload.php';
 PDO::FETCH_OBJ;
 
 $boolean = false;
-echo Carole_A3_Rendu\TypeValidator\BooleanValidator::booleanValidator($boolean);
+echo Carole_A3_Rendu\TypeValidator\BooleanValidator::booleanIsTrue($boolean);
 
 $number = 3;
 $integer = 3;

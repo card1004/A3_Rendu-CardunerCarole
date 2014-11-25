@@ -12,7 +12,7 @@ namespace Carole_A3_Rendu\TypeValidator;
 class DateTimeValidator
 {
 
-    public static function checkDay($dateDay, $day)
+    public static function checkDay($day)
     {
         $dateDay = new \DateTime();
         if($dateDay->format('d') == $day){
@@ -32,7 +32,7 @@ class DateTimeValidator
         }
     }
 
-    public static function checkYear($dateYear, $year)
+    public static function checkYear($year)
     {
         $dateYear = new \DateTime();
         if($dateYear->format('Y') == $year){
@@ -42,7 +42,7 @@ class DateTimeValidator
         }
     }
 
-    public static function checkToday($dateToday, $today)
+    public static function checkToday($today)
     {
         $dateToday = new \DateTime();
         if ($dateToday->format('Y-m-d') == $today){

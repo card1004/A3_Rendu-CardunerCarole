@@ -63,13 +63,13 @@ class StringValidator
         }
     }
 
-    public static function stringStartAndEndWithSpace($string)
+    public static function stringStartAndEndWithNoSpace($string)
     {
         if(is_string($string) === true){
             if(substr($string, 0, 1) == " " || substr($string, mb_strlen($string)-1, 1) == " "){
-                return true;
-            }else{
                 return false;
+            }else{
+                return true;
             }
         }else{
             return false;

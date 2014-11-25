@@ -21,10 +21,17 @@ class BooleanValidatorTest extends \PHPUnit_Framework_TestCase
      *
      * @throws \Exception
      */
-    public function testBooleanValidator()
+    public function testBooleanIsTrue()
     {
         $boolean = true;
-        $function = TypeValidator\BooleanValidator::booleanValidator($boolean);
+        $function = TypeValidator\BooleanValidator::booleanIsTrue($boolean);
+        $this->assertTrue($function);
+    }
+
+    public function testBooleanIsFalse()
+    {
+        $boolean = 2;
+        $function = TypeValidator\BooleanValidator::booleanIsFalse($boolean);
         $this->assertTrue($function);
     }
 }

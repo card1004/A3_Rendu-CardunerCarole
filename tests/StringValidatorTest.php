@@ -53,10 +53,10 @@ class StringValidatorTest extends \PHPUnit_Framework_TestCase{
         $this->assertTrue($result);
     }
 
-    public function testStringStartAndEndWithSpace()
+    public function testStringStartAndEndWithNoSpace()
     {
-        $string = 'This is a string ';
-        $result = TypeValidator\StringValidator::stringStartAndEndWithSpace($string);
+        $string = 'This is a string';
+        $result = TypeValidator\StringValidator::stringStartAndEndWithNoSpace($string);
 
         $this->assertTrue($result);
     }
