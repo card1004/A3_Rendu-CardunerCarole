@@ -11,16 +11,9 @@ namespace Carole_A3_Rendu\TypeValidator;
 
 class StringValidator
 {
-
-    /**
-     * @param string $string
-     * @param int $length
-     *
-     * @return bool
-     */
     public static function stringEqualTo($string, $length)
     {
-        if((string)$string && (int)$length){
+        if(is_string($string) === true && is_int($length) === true){
             if(mb_strlen($string) == $length){
                 return true;
             }else{
@@ -31,15 +24,9 @@ class StringValidator
         }
     }
 
-    /**
-     * @param string $string
-     * @param int $length
-     *
-     * @return bool
-     */
     public static function stringSuperiorTo($string, $length)
     {
-        if((string)$string && (int)$length){
+        if(is_string($string) === true && is_int($length) === true){
             if(mb_strlen($string) > $length){
                 return true;
             }else{
@@ -50,15 +37,9 @@ class StringValidator
         }
     }
 
-    /**
-     * @param string $string
-     * @param int $length
-     *
-     * @return bool
-     */
     public static function stringInferiorTo($string, $length)
     {
-        if((string)$string && (int)$length){
+        if(is_string($string) === true && is_int($length) === true){
             if(mb_strlen($string) < $length){
                 return true;
             }else{
@@ -69,16 +50,9 @@ class StringValidator
         }
     }
 
-    /**
-     * @param string $string
-     * @param int $min
-     * @param int $max
-     *
-     * @return bool
-     */
     public static function stringBetween($string, $min, $max)
     {
-        if((string)$string && (int)$min && (int)$max){
+        if(is_string($string) === true && is_int($min) === true && is_int($max) === true){
             if(mb_strlen($string) > $min && mb_strlen($string) < $max){
                 return true;
             }else{
@@ -89,14 +63,9 @@ class StringValidator
         }
     }
 
-    /**
-     * @param string $string
-     *
-     * @return bool
-     */
     public static function stringStartAndEndWithSpace($string)
     {
-        if((string)$string){
+        if(is_string($string) === true){
             if(substr($string, 0, 1) == " " || substr($string, mb_strlen($string)-1, 1) == " "){
                 return true;
             }else{
@@ -107,14 +76,9 @@ class StringValidator
         }
     }
 
-    /**
-     * @param string $string
-     *
-     * @return bool
-     */
     public static function stringWithNoWhiteSpace($string)
     {
-        if((string)$string){
+        if(is_string($string) === true){
             if(strpos($string, ' ') === false){
                 return true;
             }else{
