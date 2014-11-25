@@ -24,7 +24,7 @@ echo Carole_A3_Rendu\TypeValidator\IntegerValidator::integerInBetween($integer,$
 $string ='Nospace';
 echo Carole_A3_Rendu\TypeValidator\StringValidator::stringWithNoWhiteSpace($string);
 
-$array = array();
+$array = [];
 echo Carole_A3_Rendu\TypeValidator\ArrayValidator::arrayIsEmpty($array);
 
 var_dump(Carole_A3_Rendu\TypeValidator\ArrayValidator::arrayIsEmpty($array));
