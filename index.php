@@ -27,4 +27,8 @@ echo Carole_A3_Rendu\TypeValidator\StringValidator::stringWithNoWhiteSpace($stri
 $array = [];
 echo Carole_A3_Rendu\TypeValidator\ArrayValidator::arrayIsEmpty($array);
 
-var_dump(Carole_A3_Rendu\TypeValidator\ArrayValidator::arrayIsEmpty($array));
+$date = new DateTime();
+$today = $date->format('d');
+echo Carole_A3_Rendu\TypeValidator\DateTimeValidator::checkDay($date->format('d'), $today);
+
+var_dump(Carole_A3_Rendu\TypeValidator\DateTimeValidator::checkDay($date->format('d'), $today));
