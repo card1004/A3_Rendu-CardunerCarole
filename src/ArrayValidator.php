@@ -21,7 +21,7 @@ class ArrayValidator
     public static function arrayIsEmpty($array)
     {
         if(is_array($array) === true){
-            if(empty($array)){
+            if(empty($array) === true){
                 return true;
             }else{
                 return false;
@@ -38,19 +38,19 @@ class ArrayValidator
             {
                 case self::EQUAL_SIGN:
                     return count($array) == $number;
-                    break;
+
                 case self::SUPERIOR_SIGN:
                     return count($array) > $number;
-                    break;
+
                 case self::SUPERIOR_OR_EQUAL_SIGN:
                     return count($array) >= $number;
-                    break;
+
                 case self::INFERIOR_SIGN:
                     return count($array) < $number;
-                    break;
+
                 case self::INFERIOR_OR_EQUAL_SIGN:
                     return count($array) <= $number;
-                    break;
+
                 default:
                     return false;
             }
@@ -75,7 +75,7 @@ class ArrayValidator
     public static function keyExists($array, $key)
     {
         if(is_array($array) === true){
-            if(array_key_exists($key, $array)){
+            if(array_key_exists($key, $array) === true){
                 return true;
             }else{
                 return false;
@@ -88,7 +88,7 @@ class ArrayValidator
     public static function valueExists($array, $value)
     {
         if(is_array($array) === true){
-            if(in_array($value, $array)){
+            if(in_array($value, $array) === true){
                 return true;
             }else{
                 return false;
