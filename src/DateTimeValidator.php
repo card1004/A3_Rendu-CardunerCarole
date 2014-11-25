@@ -25,7 +25,7 @@ class DateTimeValidator
     public static function checkMonth($month)
     {
         $dateMonth = new \DateTime();
-        if($dateMonth->format('m') == $month){
+        if($dateMonth->format('m') === $month){
             return true;
         }else{
             return false;
@@ -35,7 +35,7 @@ class DateTimeValidator
     public static function checkYear($year)
     {
         $dateYear = new \DateTime();
-        if($dateYear->format('Y') == $year){
+        if($dateYear->format('Y') === $year){
             return true;
         }else{
             return false;
@@ -45,7 +45,7 @@ class DateTimeValidator
     public static function checkToday($today)
     {
         $dateToday = new \DateTime();
-        if ($dateToday->format('Y-m-d') == $today){
+        if ($dateToday->format('Y-m-d') === $today){
             return true;
         }else {
             return false;

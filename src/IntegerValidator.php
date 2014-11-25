@@ -52,7 +52,7 @@ class IntegerValidator
     public static function integerInBetween($integer, $min, $max)
     {
         if(is_int($integer) === true && is_int($min) === true && is_int($max) === true){
-            if($min<$integer && $integer<$max){
+            if($min < $integer && $integer < $max){
                 return true;
             }else{
                 return false;
