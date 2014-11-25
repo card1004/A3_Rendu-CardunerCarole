@@ -173,7 +173,7 @@ class ArrayValidatorTest extends \PHPUnit_Framework_TestCase
             'groupe'    => 'WEB1',
             'object'    => 'Rendu PHP',
         ];
-        $value = "4";
+        $value = "2";
 
         $result = TypeValidator\ArrayValidator::valueExists($array, $value);
 
