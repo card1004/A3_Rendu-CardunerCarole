@@ -97,7 +97,7 @@ class StringValidator
     public static function stringStartAndEndWithSpace($string)
     {
         if((string)$string){
-            if(substr($string, 0, 1) == " " && substr($string, mb_strlen($string)-1, 1) == " "){
+            if(substr($string, 0, 1) == " " || substr($string, mb_strlen($string)-1, 1) == " "){
                 return true;
             }else{
                 return false;
