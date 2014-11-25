@@ -16,7 +16,7 @@ class BooleanValidator
      */
     public static function booleanValidator($boolean)
     {
-        if((bool)$boolean === true){
+        if(is_bool($boolean)){
             return true;
         }else{
             return false;

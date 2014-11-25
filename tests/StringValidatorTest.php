@@ -11,7 +11,7 @@ use Carole_A3_Rendu\TypeValidator;
 
 
 /**
- * Class BooleanValidatorTest
+ * Class StringValidatorTest
  * @package Tests\Carole_A3_Rendu\TypeValidator
  */
 class StringValidatorTest extends \PHPUnit_Framework_TestCase{

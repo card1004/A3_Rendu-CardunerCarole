@@ -20,7 +20,7 @@ class IntegerValidator
      */
     public static function integerEqualTo($integer, $number)
     {
-        if((int)$integer === true && (int)$number === true){
+        if((int)$integer && (int)$number){
             if($integer == $number){
                 return true;
             }else{
@@ -44,7 +44,7 @@ class IntegerValidator
      */
     public static function integerSuperiorTo($integer, $number)
     {
-        if((int)$integer === true && (int)$number === true){
+        if((int)$integer && (int)$number){
             if($integer > $number){
                 return true;
             }else{
@@ -68,7 +68,7 @@ class IntegerValidator
      */
     public static function integerInferiorTo($integer, $number)
     {
-        if((int)$integer === true && (int)$number === true){
+        if((int)$integer && (int)$number){
             if($integer < $number){
                 return true;
             }else{
@@ -93,7 +93,7 @@ class IntegerValidator
      */
     public static function integerInBetween($integer, $min, $max)
     {
-        if((int)$integer === true && (int)$min === true && (int)$max === true){
+        if((int)$integer && (int)$min && (int)$max){
             if($min<$integer && $integer<$max){
                 return true;
             }else{

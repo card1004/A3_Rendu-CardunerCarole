@@ -20,7 +20,7 @@ class StringValidator
      */
     public static function stringEqualTo($string, $length)
     {
-        if((string)$string === true && (int)$length === true){
+        if((string)$string && (int)$length){
             if(mb_strlen($string) == $length){
                 return true;
             }else{
@@ -39,7 +39,7 @@ class StringValidator
      */
     public static function stringSuperiorTo($string, $length)
     {
-        if((string)$string === true && (int)$length === true){
+        if((string)$string && (int)$length){
             if(mb_strlen($string) > $length){
                 return true;
             }else{
@@ -58,7 +58,7 @@ class StringValidator
      */
     public static function stringInferiorTo($string, $length)
     {
-        if((string)$string === true && (int)$length === true){
+        if((string)$string && (int)$length){
             if(mb_strlen($string) < $length){
                 return true;
             }else{
@@ -78,7 +78,7 @@ class StringValidator
      */
     public static function stringBetween($string, $min, $max)
     {
-        if((string)$string === true && (int)$min === true && (int)$max === true){
+        if((string)$string && (int)$min && (int)$max){
             if(mb_strlen($string) > $min && mb_strlen($string) < $max){
                 return true;
             }else{
@@ -96,7 +96,7 @@ class StringValidator
      */
     public static function stringStartAndEndWithSpace($string)
     {
-        if((string)$string === true){
+        if((string)$string){
             if(substr($string, 0, 1) == " " && substr($string, mb_strlen($string)-1, 1) == " "){
                 return true;
             }else{
@@ -114,7 +114,7 @@ class StringValidator
      */
     public static function stringWithNoWhiteSpace($string)
     {
-        if((string)$string === true){
+        if((string)$string){
             if(strpos($string, ' ') === false){
                 return true;
             }else{
