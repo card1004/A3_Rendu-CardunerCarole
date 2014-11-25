@@ -20,7 +20,7 @@ class StringValidatorTest extends \PHPUnit_Framework_TestCase{
     {
         $string = 'This is a string';
         $length = mb_strlen($string);
-        $result = TypeValidator\StringValidator::stringEqualTo(mb_strlen($string), $length);
+        $result = TypeValidator\StringValidator::stringEqualTo($string, $length);
 
         $this->assertTrue($result);
     }
@@ -29,7 +29,7 @@ class StringValidatorTest extends \PHPUnit_Framework_TestCase{
     {
         $string = 'This is a string';
         $length = mb_strlen($string)-5;
-        $result = TypeValidator\StringValidator::stringSuperiorTo(mb_strlen($string), $length);
+        $result = TypeValidator\StringValidator::stringSuperiorTo($string, $length);
 
         $this->assertTrue($result);
     }
@@ -38,7 +38,7 @@ class StringValidatorTest extends \PHPUnit_Framework_TestCase{
     {
         $string = 'This is a string';
         $length = mb_strlen($string)+5;
-        $result = TypeValidator\StringValidator::stringInferiorTo(mb_strlen($string), $length);
+        $result = TypeValidator\StringValidator::stringInferiorTo($string, $length);
 
         $this->assertTrue($result);
     }
@@ -48,7 +48,7 @@ class StringValidatorTest extends \PHPUnit_Framework_TestCase{
         $string = 'This is a string';
         $min = mb_strlen($string)-5;
         $max = mb_strlen($string)+5;
-        $result = TypeValidator\StringValidator::stringBetween(mb_strlen($string), $min, $max);
+        $result = TypeValidator\StringValidator::stringBetween($string, $min, $max);
 
         $this->assertTrue($result);
     }
