@@ -3,12 +3,7 @@
 
 [![Build Status](https://travis-ci.org/card1004/A3_Rendu-CardunerCarole.svg?branch=master)](https://travis-ci.org/card1004/A3_Rendu-CardunerCarole) [![Code Coverage](https://scrutinizer-ci.com/g/card1004/A3_Rendu-CardunerCarole/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/card1004/A3_Rendu-CardunerCarole/?branch=master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/card1004/A3_Rendu-CardunerCarole/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/card1004/PHP_PSRA3_Rendu-CardunerCarole/?branch=master)
 
-This is a library use to validate the following data type :
-    - Boolean
-    - Integer
-    - String
-    - Array
-    - Date
+This is a library use to validate the following data type : boolean, integer, string, array, date
     
 All methods return true if the validation is validate and false if it isn't.
 
