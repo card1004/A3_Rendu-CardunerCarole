@@ -5,7 +5,7 @@
 
 This is a library use to validate the following data type : boolean, integer, string, array, date
     
-All methods return true if the validation is validate and false if it isn't.
+All methods return true if the conditions are reach and false if they aren't.
 
 
 ## What does it validate ?
