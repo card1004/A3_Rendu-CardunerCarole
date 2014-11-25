@@ -22,7 +22,7 @@ class DateTimeValidator
         }
     }
 
-    public static function checkMonth($dateMonth, $month)
+    public static function checkMonth($month)
     {
         $dateMonth = new \DateTime();
         if($dateMonth->format('m') == $month){
