@@ -23,9 +23,10 @@ class IntegerValidatorTest extends \PHPUnit_Framework_TestCase
      */
     public function testIntegerEqualTo()
     {
-        $integer = mt_rand(18, 100);
+        $integer = 20;
         $number = $integer;
         $result = TypeValidator\IntegerValidator::integerEqualTo($integer, $number);
+
         $this->assertTrue($result);
     }
 
@@ -36,7 +37,7 @@ class IntegerValidatorTest extends \PHPUnit_Framework_TestCase
      */
     public function testIntegerSuperiorTo()
     {
-        $integer = mt_rand(18, 100);
+        $integer = 20;
         $number = $integer-1;
         $result = TypeValidator\IntegerValidator::integerSuperiorTo($integer, $number);
 
@@ -50,7 +51,7 @@ class IntegerValidatorTest extends \PHPUnit_Framework_TestCase
      */
     public function testIntegerInferiorTo()
     {
-        $integer = mt_rand(18, 100);
+        $integer = 20;
         $number = $integer+1;
         $result = TypeValidator\IntegerValidator::integerInferiorTo($integer, $number);
 
@@ -64,7 +65,7 @@ class IntegerValidatorTest extends \PHPUnit_Framework_TestCase
      */
     public function testIntegerInBetween()
     {
-        $integer = mt_rand(18, 100);
+        $integer = 20;
         $min = $integer-5;
         $max = $integer+5;
         $result = TypeValidator\IntegerValidator::integerInBetween($integer, $min, $max);
